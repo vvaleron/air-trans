@@ -21,6 +21,7 @@
         <spring-data-jpa.version>1.9.0.RELEASE</spring-data-jpa.version>
         <mysql-connector-java.version>5.1.6</mysql-connector-java.version>
         <hibernate-entitymanager.version>4.2.0.Final</hibernate-entitymanager.version>
+        <hsqldb.version>2.3.3</hsqldb.version>
     </properties>
 
     <dependencies>
@@ -90,6 +91,13 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>${hibernate-entitymanager.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+        </dependency>
+
 
 
     </dependencies>
