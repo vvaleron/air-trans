@@ -15,7 +15,7 @@
         <slf4j-log4j12.version>1.7.12</slf4j-log4j12.version>
         <cglib.version>3.1</cglib.version>
         <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
-        <java.version>1.8</java.version>
+        <java.version>1.7</java.version>
         <commons-lang3.version>3.4</commons-lang3.version>
         <commons-logging.version>1.2</commons-logging.version>
         <spring-data-jpa.version>1.9.0.RELEASE</spring-data-jpa.version>
