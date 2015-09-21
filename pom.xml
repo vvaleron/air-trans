@@ -22,6 +22,7 @@
         <mysql-connector-java.version>5.1.6</mysql-connector-java.version>
         <hibernate-entitymanager.version>4.2.0.Final</hibernate-entitymanager.version>
         <hsqldb.version>2.3.3</hsqldb.version>
+        <maven-war-plugin.version>2.1.1</maven-war-plugin.version>
     </properties>
 
     <dependencies>
@@ -150,5 +151,26 @@
         </plugins>
 
     </build>
+    <profiles>
+        <profile>
+            <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn. -->
+            <!-- Use this profile for any OpenShift specific customization your app will need. -->
+            <!-- By default that is to put the resulting archive into the 'deployments' folder. -->
+            <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+            <id>openshift</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>${maven-war-plugin.version}</version>
+                        <configuration>
+                            <outputDirectory>deployments</outputDirectory>
+                            <warName>ROOT</warName>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
 </project>
