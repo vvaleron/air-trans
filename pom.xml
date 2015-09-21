@@ -103,7 +103,7 @@
     </dependencies>
 
     <build>
-        <finalName>air-trans</finalName>
+        <finalName>ROOT</finalName>
 
         <pluginManagement>
             <plugins>
